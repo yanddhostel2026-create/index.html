@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Y&amp;D Hostel Khaosan</title>
+<style>
+body{font-family:Arial,sans-serif;margin:0;padding:0;line-height:1.6;}
+header{background:#222;color:#fff;padding:40px 20px;text-align:center;}
+h1{margin:0;}
+section{padding:30px 20px;}
+.rooms, .attractions{display:flex;flex-wrap:wrap;gap:20px;}
+.card{border:1px solid #ccc;border-radius:8px;padding:15px;flex:1 1 200px;}
+.btn{background:#28a745;color:#fff;padding:12px 20px;display:inline-block;text-decoration:none;border-radius:6px;}
+.form-group{margin-bottom:15px;}
+input, textarea{width:100%;padding:10px;border:1px solid #ccc;border-radius:4px;}
+footer{text-align:center;padding:15px;background:#222;color:#fff;}
+iframe{width:100%;height:250px;border:0;border-radius:8px;}
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Y&D Hostel Khaosan</h1>
+  <p>Affordable & friendly hostel just steps from Khaosan Road, Bangkok</p>
+  <a class="btn" href="#booking">Book Now</a>
+</header>
+
+<section id="about">
+  <h2>About Us</h2>
+  <p>Welcome to Y&D Hostel — located at <strong>37 Chakrabongse Rd, Bangkok 10200, Thailand</strong>, just a 5-minute walk from Khaosan Road and close to Bangkok’s top attractions. :contentReference[oaicite:1]{index=1}</p>
+  <p>We offer clean, air-conditioned rooms with free Wi-Fi, 24/7 front desk, luggage storage and a restaurant and bar. :contentReference[oaicite:2]{index=2}</p>
+</section>
+
+<section id="rooms">
+  <h2>Rooms & Amenities</h2>
+  <div class="rooms">
+    <div class="card">
+      <h3>Shared Dormitory</h3>
+      <p>Air-conditioned dorm beds with shared bathrooms.</p>
+      <p>Amenities: Free Wi-Fi, daily housekeeping, lockers, bar & restaurant. :contentReference[oaicite:3]{index=3}</p>
+    </div>
+    <div class="card">
+      <h3>Common Area</h3>
+      <p>Relax with other guests in our lounge and social spaces.</p>
+    </div>
+  </div>
+</section>
+
+<section id="attractions">
+  <h2>Nearby Attractions</h2>
+  <div class="attractions">
+    <div class="card"><strong>Khaosan Road</strong><p>World-famous backpacker street with nightlife & food. :contentReference[oaicite:4]{index=4}</p></div>
+    <div class="card"><strong>Grand Palace & Temple of the Emerald Buddha</strong><p>Historic royal palace complex in Old City. :contentReference[oaicite:5]{index=5}</p></div>
+    <div class="card"><strong>Sanamluang Park</strong><p>Open green space for walking & relaxing. :contentReference[oaicite:6]{index=6}</p></div>
+    <div class="card"><strong>Thammasat University</strong><p>Historic university area near old town. :contentReference[oaicite:7]{index=7}</p></div>
+  </div>
+</section>
+
+<section id="map">
+  <h2>Find Us</h2>
+  <!-- Google Maps Embed -->
+  <iframe src="https://www.google.com/maps?q=37%20Chakrabongse%20Rd%20Bangkok%2010200%20Thailand&output=embed"></iframe>
+</section>
+
+<section id="airport">
+  <h2>Airport Pickup</h2>
+  <p>We can help arrange pickups from:</p>
+  <ul>
+    <li><strong>Suvarnabhumi Airport (BKK)</strong> — approx. 40–60 min</li>
+    <li><strong>Don Mueang Airport (DMK)</strong> — approx. 30–50 min</li>
+  </ul>
+  <p>Contact us via WhatsApp for pricing & scheduling.</p>
+</section>
+
+<section id="party">
+  <h2>Nightlife & Parties</h2>
+  <p>Khaosan Road is one of Bangkok’s most vibrant nightlife hubs — street bars, clubs, pub crawls and live music. Perfect for backpackers looking to meet others and enjoy evenings out. :contentReference[oaicite:8]{index=8}</p>
+</section>
+
+<section id="booking">
+  <h2>Book Your Stay</h2>
+  <p>Fill in your booking info below — then click the WhatsApp button to confirm with us.</p>
+
+  <div style="max-width:600px;margin:auto;">
+    <div class="form-group">
+      <input type="text" id="name" placeholder="Full Name">
+    </div>
+    <div class="form-group">
+      <input type="date" id="checkin" placeholder="Check-in Date">
+    </div>
+    <div class="form-group">
+      <input type="date" id="checkout" placeholder="Check-out Date">
+    </div>
+    <div class="form-group">
+      <input type="text" id="guests" placeholder="Number of Guests">
+    </div>
+    <div class="form-group">
+      <input type="text" id="roomtype" placeholder="Room Type">
+    </div>
+    <a class="btn" 
+       href="#"
+       onclick="sendWhatsApp()"
+       id="whatsappLink">
+      Confirm via WhatsApp
+    </a>
+  </div>
+</section>
+
+<footer>
+  <p>Y&D Hostel Khaosan — Contact us on WhatsApp: +66 93827 2786</p>
+</footer>
+
+<script>
+function sendWhatsApp(){
+  var name = document.getElementById('name').value;
+  var ci = document.getElementById('checkin').value;
+  var co = document.getElementById('checkout').value;
+  var guests = document.getElementById('guests').value;
+  var room = document.getElementById('roomtype').value;
+  var msg = 
+    "Hi! I want to book:%0A" +
+    "Name: " + name + "%0A" +
+    "Check-in: " + ci + "%0A" +
+    "Check-out: " + co + "%0A" +
+    "Guests: " + guests + "%0A" +
+    "Room type: " + room;
+  var number = "66938272786";
+  window.location.href = "https://wa.me/" + number + "?text=" + msg;
+}
+</script>
+
+</body>
+</html>
