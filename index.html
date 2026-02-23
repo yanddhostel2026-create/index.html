@@ -10,16 +10,16 @@
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
 <style>
-/* ===== GLOBAL RESET & BASE ===== */
 html { scroll-behavior: smooth; }
+
 body {
   margin: 0;
   font-family: 'Poppins', sans-serif;
-  background: #0f0f0f;
-  color: #eee;
+  background: #0b0b0b;
+  color: #f5f5f5;
 }
 
-/* HEADER */
+/* ===== HEADER ===== */
 header {
   position: fixed;
   top: 0;
@@ -27,78 +27,105 @@ header {
   background: #111;
   display: flex;
   justify-content: space-between;
-  padding: 15px 30px;
+  align-items: center;
+  padding: 15px 40px;
   z-index: 1000;
-}
-header nav a {
-  margin: 0 12px;
-  color: #fff;
-  text-decoration: none;
-  font-weight: 600;
-}
-header nav a:hover {
-  color: #ff0066;
-}
-.book-btn {
-  background: #ff0066;
-  color: white;
-  padding: 10px 20px;
-  border-radius: 25px;
-  text-decoration: none;
-  font-weight: bold;
+  border-bottom: 1px solid #d4af37;
 }
 
-/* HERO */
+header nav a {
+  margin: 0 15px;
+  color: #f5f5f5;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+header nav a:hover {
+  color: #d4af37;
+}
+
+.book-btn {
+  background: #d4af37;
+  color: black;
+  padding: 10px 22px;
+  border-radius: 30px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+/* ===== HERO SECTION ===== */
 .hero {
   margin-top: 80px;
-  background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
-  url('https://images.unsplash.com/photo-1519671482749-fd09be7ccebf') center/cover no-repeat;
-  height: 90vh;
+  height: 95vh;
+  background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
+  url('https://images.unsplash.com/photo-1520250497591-112f2f40a3f4') center/cover no-repeat;
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
 }
+
 .hero h1 {
-  font-size: 52px;
-  color: #ff66cc;
+  font-size: 56px;
+  color: #d4af37;
   margin-bottom: 15px;
 }
+
 .hero p {
   font-size: 20px;
-  color: #fff;
+  color: #ddd;
 }
 
-/* SECTIONS */
-.section { padding: 80px 30px; text-align: center; }
+/* ===== SECTIONS ===== */
+.section {
+  padding: 90px 40px;
+  text-align: center;
+}
 
-/* CARD STYLES */
+.section h2 {
+  color: #d4af37;
+  margin-bottom: 40px;
+}
+
+/* ===== ROOM / TOUR CARDS ===== */
 .rooms {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 25px;
-}
-.card {
-  background: #222;
-  width: 280px;
-  padding: 25px;
-  border-radius: 15px;
-  box-shadow: 0 8px 25px rgba(0,0,0,0.4);
+  gap: 30px;
 }
 
-/* STICKY BOOK BUTTON */
+.card {
+  background: #161616;
+  width: 300px;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 10px 40px rgba(212,175,55,0.15);
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 50px rgba(212,175,55,0.35);
+}
+
+.card h3 {
+  color: #d4af37;
+}
+
+/* ===== STICKY WHATSAPP BUTTON ===== */
 .sticky-book {
   position: fixed;
-  bottom: 18px;
-  right: 18px;
-  background: #ff0066;
-  color: white;
+  bottom: 20px;
+  right: 20px;
+  background: #d4af37;
+  color: black;
   padding: 15px 28px;
   border-radius: 50px;
   font-weight: bold;
   text-decoration: none;
-  box-shadow: 0 0 18px #ff0066;
+  box-shadow: 0 0 20px rgba(212,175,55,0.6);
 }
 </style>
 </head>
