@@ -19,7 +19,14 @@ body {
   background: #0b0b0b;
   color: #eee;
 }
+* {
+  box-sizing: border-box;
+}
 
+img {
+  max-width: 100%;
+  display: block;
+}
 /* ===== HEADER ===== */
 header {
   position: fixed;
@@ -155,15 +162,13 @@ header nav a:hover {
     padding: 15px 20px;
   }
 }
-  /* ===== GALLERY SECTION ===== */
-.gallery {
+  .gallery {
   padding: 80px 20px;
-  text-align: center;
 }
 
 .gallery-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 20px;
   max-width: 1200px;
   margin: auto;
@@ -171,14 +176,9 @@ header nav a:hover {
 
 .gallery-grid img {
   width: 100%;
-  height: 250px;
+  height: 220px;
   object-fit: cover;
-  border-radius: 15px;
-  transition: 0.3s ease;
-}
-
-.gallery-grid img:hover {
-  transform: scale(1.05);
+  border-radius: 12px;
 }
 </style>
 </head>
