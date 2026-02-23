@@ -123,6 +123,45 @@ text-align:center;
   max-width:400px;
   box-shadow:0 0 15px #ff00cc;
 }
+  .tours {
+  background: #0f0f0f;
+  text-align: center;
+  padding: 80px 20px;
+}
+
+.tours h2 {
+  font-size: 40px;
+  margin-bottom: 10px;
+}
+
+.tour-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+  margin-top: 40px;
+}
+
+.tour-card {
+  background: #1c1c1c;
+  padding: 30px;
+  border-radius: 15px;
+  transition: 0.3s ease;
+}
+
+.tour-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 30px rgba(255,0,200,0.3);
+}
+  .tour-btn {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 10px 20px;
+  background: #ff00cc;
+  color: white;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: bold;
+}
 </style>
 </head>
 
@@ -178,7 +217,42 @@ text-align:center;
   <div class="activity-card">🎲 Drinking games & social nights</div>
   <div class="activity-card">📸 Group pub crawls</div>
 </section>
+  <section class="tours">
+  <h2>🌏 Explore Bangkok & Beyond</h2>
+  <p>We help our guests book the best local experiences.
+  <a href="https://wa.me/66938272786" class="tour-btn">Book This Tour</a>
+  </p>
 
+  <div class="tour-grid">
+    <div class="tour-card">
+      <h3>🚤 Floating Market Tour</h3>
+      <p>Experience traditional Thai markets on the water.
+      <a href="https://wa.me/66938272786" class="tour-btn">Book This Tour</a>
+      </p>
+    </div>
+
+    <div class="tour-card">
+      <h3>🏝️ Island Day Trips</h3>
+      <p>Explore beautiful beaches and tropical islands.
+      <a href="https://wa.me/66938272786" class="tour-btn">Book This Tour</a>
+      </p>
+    </div>
+
+    <div class="tour-card">
+      <h3>🛕 Temple & City Tour</h3>
+      <p>Visit iconic temples and discover Bangkok culture.
+      <a href="https://wa.me/66938272786" class="tour-btn">Book This Tour</a>
+      </p>
+    </div>
+
+    <div class="tour-card">
+      <h3>🍜 Street Food Night Tour</h3>
+      <p>Taste the best local food spots around the city.
+      <a href="https://wa.me/66938272786" class="tour-btn">Book This Tour</a>
+      </p>
+    </div>
+  </div>
+</section>
 <section class="section" id="gallery">
 <h2>Hostel Gallery</h2>
 <div class="carousel">
